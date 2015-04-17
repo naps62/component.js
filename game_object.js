@@ -19,14 +19,6 @@ GameObject.prototype.render = function() {
   });
 }
 
-GameObject.prototype.onCollision = function(other) {
-  this.components.map(function(component) {
-    if (component.enabled && !!component.onCollision) {
-      component.onCollision(other);
-    }
-  });
-}
-
 GameObject.prototype.getComponents = function(type) {
   if (type == null) {
     return this.components;

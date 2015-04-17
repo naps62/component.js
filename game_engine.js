@@ -13,7 +13,6 @@ GameEngine.prototype.update = function() {
 }
 
 GameEngine.prototype.render = function() {
-  console.log("New frame");
   this.objs.map(function(o) {
     o.render();
   });
